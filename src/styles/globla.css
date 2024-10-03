@@ -1,0 +1,19 @@
+
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-10%);
+      opacity: 0;
+    }
+    100% {
+      tranform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .animate-slideRight {
+    animation: slideRight 1s ease-in-out;
+  }
+
+
+
+/* Hero Section  Main Text Effect & Animation */
+

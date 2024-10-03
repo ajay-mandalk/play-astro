@@ -9,28 +9,22 @@ import { SignedIn, SignedOut, UserButton, SignUpButton } from "@clerk/astro/comp
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
  
-    <style>
-      body {
-        background-image: url('/assets/hero/anmol-hero.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    </style>
   </head>
-  <body class="min-h-screen flex justify-center items-center ">
-    <div class="bg-white bg-opacity-70 p-16 rounded shadow-md w-96">
-      <header class="mb-4">
-        <h1 class="text-2xl font-bold mb-4 text-center">Are you trapped in the chains of Addiction?</h1>
-        <p class="mb-4 flex justify-center font-bold ">Please Login</p>
-        <nav class="flex justify-center">
-          <SignedOut>
-            <SignUpButton mode="modal" class=" bg-primary hover:bg-primary-700 text-white font-bold py-2 px-4 rounded" />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-        </nav>
+  <body class="min-h-screen bg-[url('/assets/hero/anmol-hero.png')] bg-cover bg-no-repeat flex justify-center items-center ">
+    <div class="bg-white bg-opacity-70 p-8 rounded shadow-md w-96">
+      <header class="text-center mb-8">
+        <h1 class="text-3xl font-bold mb-4">Seeking Support?</h1>
+        <p class="text-gray-600">Login to access resources and connect with others.</p>
       </header>
+      
+      <nav class="flex justify-center space-x-4 mb-6">
+        <SignedOut>
+          <SignUpButton mode="modal" class="bg-primary hover:bg-primary-700 text-white font-bold py-2 px-4 rounded">Sign Up</SignUpButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </nav>
       <article>
         <slot />
       </article>
